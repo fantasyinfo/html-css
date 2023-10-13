@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;300;500;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1.6;
+      }
+
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      .login-box {
+        max-width: 300px;
+        width: 100%;
+        height: 625px;
+        margin: auto;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        padding: 24px;
+        margin-top: 20px;
+      }
+      .login-box .header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .login-box .header span {
+        font-size: 16px;
+        font-weight: 800;
+        line-height: normal;
+        font-family: "Open Sans";
+        background: linear-gradient(272deg, #059669 22.06%, #00d995 116.84%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .login-box .title {
+        margin-top: 24px;
+      }
+      .login-box .title h4 {
+        color: #191d23;
+        font-family: "Manrope";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .login-box .title p {
+        color: #64748b;
+        font-family: "Manrope";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 8px;
+      }
+      .form-login {
+        margin-top: 24px;
+      }
+      .form-elements {
+        margin: 24px 0px;
+      }
+
+      .form-elements label {
+        overflow: hidden;
+        color: #191d23;
+        text-overflow: ellipsis;
+
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 8px;
+      }
+      .form-elements input {
+        display: flex;
+        height: 40px;
+        padding: 8px 12px;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        align-self: stretch;
+        border-radius: 4px;
+        border: 1.5px solid #64748b;
+        overflow: hidden;
+        color: #191d23;
+        text-overflow: ellipsis;
+
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .form-elements span {
+        overflow: hidden;
+        color: #dc2626;
+        text-overflow: ellipsis;
+
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        display: none;
+      }
+      .form-elements-checkbox {
+        margin-bottom: 24px;
+      }
+      .form-elements-checkbox input[type="checkbox"]:checked {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        background-color: #047857;
+      }
+      .form-elements-checkbox span {
+        color: #191d23;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .continue_btn {
+        display: flex;
+        height: 44px;
+        padding: 6px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        align-self: stretch;
+        border-radius: 4px;
+        background: #047857;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-feature-settings: "clig" off, "liga" off;
+        font-family: Manrope;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border: none;
+      }
+
+      .sign-up-with {
+        overflow: hidden;
+        color: #4b5768;
+        text-overflow: ellipsis;
+
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-align: center;
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sign-up-with::before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background-color: #4b5768;
+        margin-right: 5px;
+      }
+      .sign-up-with::after {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 2px;
+        background-color: #4b5768;
+        margin-left: 5px;
+      }
+
+      .social-login{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:13px;
+        gap: 6px;
+      }
+
+      .social-login button{
+        border:none;
+        display: flex;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        flex: 1 0 0;
+        border-radius: 4px;
+        border: 1px solid var(--neutral-200, #D0D5DD);
+        opacity: 0.8;
+        background-color: white;
+        cursor:pointer;
+      }
+      .social-login button span{
+        margin-right: 6px;
+      }
+
+      .auth_link{
+        margin-top:32px;
+      }
+      .auth_link h3{
+        overflow: hidden;
+        color: #191D23;
+        text-align: center;
+        text-overflow: ellipsis;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .auth_link a{
+        color:  #047857;
+        font-family: Manrope;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor:pointer
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <div class="header">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="22"
+          viewBox="0 0 24 22"
+          fill="none"
+        >
+          <path
+            d="M3.98583 7.65676L6.54385 6.1815L5.116 3.70974H18.5445L11.8324 15.3394L10.4046 12.8634L7.84658 14.343L11.8324 21.2449L23.6605 0.754883H0L3.98583 7.65676Z"
+            fill="url(#paint0_linear_2_9442)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_2_9442"
+              x1="29.4341"
+              y1="4.15113"
+              x2="-10.6739"
+              y2="7.38564"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.100157" stop-color="#059669" />
+              <stop offset="0.707994" stop-color="#00D090" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span>AcmeSystems</span>
+      </div>
+      <div class="title">
+        <h4>Admin Login</h4>
+        <p>Welcome back. Enter your credentials to access your account</p>
+      </div>
+      <form class="form-login">
+        <div class="form-elements">
+          <label>Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="hello@example.c"
+          />
+          <span>Please enter correct email</span>
+        </div>
+        <div class="form-elements">
+          <label>Password</label>
+          <input type="password" name="password" id="password" placeholder="" />
+          <span>Please enter correct password</span>
+        </div>
+        <div class="form-elements-checkbox">
+          <input type="checkbox" name="rememberme" id="rememberme" />
+          <span>Keep me signed in</span>
+        </div>
+        <button type="button" class="continue_btn" name="continue">
+          Continue
+        </button>
+      </form>
+      <div class="sign-up-with">or sign up with</div>
+    
+    <div class="social-login">
+        <button>
+            <ion-icon name="logo-google"></ion-icon>   <span>Google</span>
+        </button>
+        <button>
+            <ion-icon name="logo-apple"></ion-icon><span>Apple</span>
+        </button>
+        <button>
+            <ion-icon name="logo-facebook"></ion-icon><span>Facebook</span> 
+        </button>
+    </div>
+    <div class="auth_link">
+        <h3>Don’t have an Account? <a> Sign up here </a></h3>
+    </div>
+    
+    </div>
+  </body>
+</html>
