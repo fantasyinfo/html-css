@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style> 
+ 
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        line-height: 1.6;
+    }
+    a{
+        text-decoration: none;
+    }
+    body{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f7f7f7;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .profile-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70%;
+        max-width: 400px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow:0 5px 10px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    .profile-card::before{
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        height: 30%;
+        width: 100%;
+        background-color: #1057ee;
+        z-index: 1;
+        border-radius:10px 10px 0 0;
+
+    }
+    .img-card{
+        z-index: 2;
+    }
+    .img-card img{
+        height: 120px;
+        width:120px;
+        border-radius: 50%;
+        border:2px solid rgb(223, 205, 5);
+        
+    }
+
+    .text-content h2{
+        font-size: 1.4rem;
+        color:#333;
+        font-weight: bold;
+        text-align: center;
+    }
+    .text-content p{
+        font-size: .8rem;
+        color:#444343;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .social-icons{
+        margin-top:20px;
+        margin-bottom:20px;
+        display: flex;
+        justify-content:center;
+        flex-direction: row;
+        gap:20px;
+        font-size: 2rem;
+    }
+    .social-icons a {
+        cursor: pointer;
+
+    }
+    .cta-buttons{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        gap:20px;
+    }
+    .cta-buttons button {
+        height: 50px;
+        padding:10px 30px;
+        border-radius:10px;
+        background-color: #1057ee;
+        border:none;
+        color:#fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .cta-buttons button:last-child{
+        background-color: #CD201F;
+    }
+    .cta-buttons button:hover{
+        opacity: 0.8;
+    }
+    .anaylitics{
+        display: flex;
+        gap:20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .anaylitics .a-items{
+        font-size: 1.3rem;
+        padding-right: 10px;
+        border-right: 2px solid #d2cfcf;
+    }
+    .anaylitics .a-items:last-child{
+        border-right: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="img-card">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-83414114.jpg" />
+        </div>
+        <div class="text-content">
+            <h2>Larry Page</h2>
+            <p>Google.com Founder</p>
+
+            <div class="social-icons">
+                <a href="https://facebook.com" style="color:#3b5998;" >
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://google.com" style="color:#DB4437;">
+                    <ion-icon name="logo-google"></ion-icon>
+                </a>
+                <a href="https://twitter.com" style="color:#26a7de;">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+                <a href="https://instagram.com" style="color:#feda75" >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://youtube.com" style="color: #CD201F;">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </div>
+            <div class="cta-buttons">
+                <button type="button">Go to Google</button>
+                <button type="button">Go to Youtube</button>
+            </div>
+            <div class="anaylitics">
+                <div class="a-items">
+                    <ion-icon name="heart-outline"></ion-icon>60k
+                </div>
+                <div class="a-items">
+                    <ion-icon name="happy-outline"></ion-icon> 50k
+                </div>
+                <div class="a-items">
+                    <ion-icon name="share-social-outline"></ion-icon> 45k
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
