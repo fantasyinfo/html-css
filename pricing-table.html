@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        body{
+            background-color: #c8b6ff;
+        }
+
+        .title{
+            font-size:2rem;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 5px;
+            color:black;
+        }
+
+        .para{
+            color:rgba(0,0,0,0.7);
+            font-size:1rem;
+        }
+
+        .box{
+            height: 100vh;
+        
+            max-width: 1200px;
+            margin:auto;
+            padding:20px;
+        }
+        .pricing{
+            margin-top:20px;
+            display:flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap:20px;
+            flex-wrap: wrap;
+        }
+
+        .plans{
+            background-color: #f6f6f6;
+            height: 100%;
+            width: 300px;
+            border-radius: 10px;
+            color:#073b4c;
+            position:relative;
+            box-sizing: border-box;
+            /* border: 1px solid transparent; */
+            padding-top:20px;
+           
+        }
+
+        .plans:hover{
+            box-shadow: rgba(233, 170, 10, 0.16) 3px 3px 4px;
+            border:1px solid rgb(233, 170, 10);
+            background-color: #f9f9f9;
+        }
+
+        .plans .plan-name {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding-left:20px;
+            padding-right:20px;
+        }
+
+        .plans h2{
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color:#008000;
+            background-color: #eae2b7;
+            padding:10px;
+            text-align:center;
+          
+        }
+        .plans h2 span{
+            font-size: 1.2rem;
+            color:#000;
+        }
+        .plans ul{
+            text-decoration: none;
+            margin:0;
+            padding:0;
+            list-style-type: none;
+            padding-left:20px;
+            padding-right:20px;
+        }
+        .plans li {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            
+        }
+        .plans li:before{
+            content: '\2713';
+            margin-right: 20px;
+        }
+
+        #pro{
+            position:absolute;
+            right:0;
+            top:20;
+            background-color: red;
+            color:white;
+            padding:10px;
+            rotate:45deg;
+        }
+        .plans .plan-btn{
+            margin-top: 30px;
+            width: 100%;
+            height: 60px;
+            background-color: #d90429;
+            color:white;
+            text-transform: uppercase;
+            padding:10px;
+            
+            border:none;
+            font-size: 1rem;
+            cursor:pointer;
+
+        }
+        .plans .plan-btn:hover{
+            background-color: #b40320;
+            color:#f7f7f7;
+        }
+        .strike-through{
+            text-decoration: line-through;
+        }
+
+
+       @media screen and (max-width:600px) {
+        .pricing{
+            flex-direction: column;
+            align-items: center;
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2 class="title">Pricing Plans</h2>
+        <p class="para">Choose the best plan that best fit for you.</p>
+        <div class="pricing">
+
+            <div class="plans">
+                <span class="plan-name">Free</span>
+                <h2>$0 <span> monthly</span></h2>
+                <ul>
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                    <li class="strike-through">Point 3</li>
+                    <li class="strike-through">Point 4</li>
+                    <li class="strike-through">Point 5</li>
+                </ul>
+                <button class="plan-btn">Buy Now</button>
+            </div>
+            <div class="plans">
+                <span class="plan-name">Starter</span>
+                  <h2>$ 100 <span> monthly</span></h2>
+                     <ul>
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                    <li>Point 3</li>
+                    <li>Point 4</li>
+                    <li class="strike-through">Point 5</li>
+                </ul>
+                <button class="plan-btn">Buy Now</button>
+            </div>
+            <div class="plans">
+                <span id="pro">Most Popular</span>
+                <span class="plan-name">Pro</span>
+                  <h2>$ 400 <span> monthly</span></h2>
+                     <ul>
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                    <li>Point 3</li>
+                    <li>Point 4</li>
+                    <li>Point 5</li>
+                    <li>Point 6</li>
+                    <li>Point 7</li>
+                    <li>Point 8</li>
+                </ul>
+                <button class="plan-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
