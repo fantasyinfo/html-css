@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Header Design (Ecommerce) - 1</title>
+        <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+            /* font-family: 'Inter', sans-serif; */
+            *{
+                margin:0;
+                padding:0;
+                border:border-box;
+                box-sizing: border-box;
+            }
+            :root{
+                --color-white: #ffffff;
+                --color-light-white: #F6F8F9;
+                --color-black: #000000;
+                --color-heading-black: #252C32;
+                --color-light-blue:#4094F7;
+                /* font-family*/
+                --font-family-inter: 'Inter', sans-serif;
+            }
+           html{
+            font-size: 62.5%; 
+           }
+            header{
+                max-width: 1400px;
+                width: 100%;
+                height: 112px;
+                background-color: var(--color-white);
+                padding:24px;
+            }
+            .top-section{
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap:16px;
+            }
+            .top-section .logo{
+                width: 162px;
+            }
+            .top-section .category-btn{
+                display: flex;
+                align-items: center;
+                gap:8px;
+                width: 138px;
+                height: 40px;
+                background-color: var(--color-light-blue);
+                border-radius: 6px;
+                padding:16px;
+                margin-left:36px;
+            }
+            .top-section .category-btn span{
+               color:var(--color-light-white);
+               font-family: var(--font-family-inter);
+               font-size: 1.4rem;
+               line-height: 2.4rem;
+               font-weight: 600;
+            }
+            .top-section .search-section{
+                flex:1;
+                display: flex;
+                align-items: center;
+                padding:8px 16px;
+                border:1px solid #DDE2E4;
+                border-radius: 6px;
+            }
+            .top-section .search-section input{
+                flex:1;
+                border:none;
+                font-size:1.4rem;
+                font-weight: 400;
+                line-height: 24px;
+                font-family: var(--font-family-inter);
+            }
+            .top-section .search-section input:focus{
+                outline:none;
+            }
+            .top-section .icon-text{
+                display: flex;
+                align-items: center;
+                gap:8px;
+                cursor: pointer;
+            }
+            .top-section .icon-text span{
+                font-family: var(--font-family-inter);
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 24px;
+                color: var(--color-heading-black);
+            }
+            .btn{
+                padding:8px 16px;
+                border:none;
+                outline:none;
+               
+                border-radius:6px;
+                cursor:pointer;
+                font-size:1.4rem;
+                font-family: var(--font-family-inter);
+                line-height: 24px;
+                font-weight: 400;
+
+            }
+            .btn-light{
+                background-color: var(--color-white);
+                border:1px solid #DDE2E4;
+            }
+            
+            /*cart total*/
+            .cart-box{
+                position:relative;
+
+            }
+            #cart-total{
+                position:absolute;
+                top:-5px;
+                left:13px;
+                color: #FFEFEB;
+                background-color: #F76659;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                font-size:1.2rem;
+                font-weight: 600;
+                line-height: 16px;
+                font-family: var(--font-family-inter);
+            }
+            /*bottom section*/
+            .bottom-section{
+                /* margin:24px 32px; */
+                margin-top: 1.6rem;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .bottom-section .location{
+                display: flex;
+                align-items: center;
+                gap:8px;
+            }
+            .bottom-section .location span{
+                font-family: var(--font-family-inter);
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 24px;
+                color: var(--color-heading-black);
+            }
+
+            .bottom-section  nav ul{
+                display:flex;
+                gap:32px;
+                list-style-type: none;
+
+            }
+            .bottom-section  nav li{
+                display: inline-block;
+            }
+            .bottom-section  nav li a,.bottom-section .become-seller{
+                text-decoration: none;
+                color: var(--color-heading-black);
+                font-family: var(--font-family-inter);
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="top-section">
+                <a href="/" class="logo">
+                    <img src="./images/header-ecom-1/Logo.svg" alt="logo" />
+                </a>
+                <div class="category-btn">
+                    <ion-icon style='height: 24px;width: 24px;color: var(--color-white);cursor:pointer;'name="menu-outline"></ion-icon>
+                    <span>Categories</span>
+                </div>
+                <div class="search-section">
+                    <input type="search" name="search" id="search" placeholder="DJI phantom" />
+                    <ion-icon name="search-outline" style='height: 24px;width: 24px;color: #B0BABF;cursor:pointer;'></ion-icon>
+                </div>
+                <div class="icon-text">
+                    <ion-icon name="cube-outline" style='height: 24px;width: 24px;color: #B0BABF;cursor:pointer;'></ion-icon>
+                    <span>Orders</span>
+                </div>
+                <div class="icon-text">
+                    <ion-icon name="heart-outline" style='height: 24px;width: 24px;color: #B0BABF;cursor:pointer;'></ion-icon>
+                    <span>Favorites</span>
+                </div>
+                <div class="icon-text cart-box">
+                    <ion-icon name="cart-outline" style='height: 24px;width: 24px;color: #B0BABF;cursor:pointer;'></ion-icon>
+                    <span>Cart</span>
+                    <span id="cart-total">3</span>
+                </div>
+                <button type="button" class="btn btn-light">Sign In</button>
+            </div>
+            <div class="bottom-section">
+                <div class="location">
+                    <ion-icon name="location-outline" style='height: 24px;width: 24px;color: #B0BABF;cursor:pointer;'></ion-icon>
+                    <span>California</span>
+                </div>
+              
+                    <nav>
+                        <ul>
+                            <li><a href='#' >Best Sellers</a></li>
+                            <li><a href='#' >New Releases</a></li>
+                            <li><a href='#' >Books</a></li>
+                            <li><a href='#' >Computers</a></li>
+                            <li><a href='#' >Fashion</a></li>
+                            <li><a href='#' >Health</a></li>
+                            <li><a href='#' >Pharmacy</a></li>
+                            <li><a href='#' >Toys & Games</a></li>
+                        </ul>
+                    </nav>
+                <a href="#" class="become-seller">Become a seller</a>
+            </div>
+        </header>
+    </body>
+</html>
