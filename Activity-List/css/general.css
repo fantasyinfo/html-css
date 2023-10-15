@@ -7,27 +7,27 @@
 }
 @font-face {
     font-family: 'NT Somic Regular';
-    src: url('./fonts/NTSomic-Regular.woff2');
+    src: url('../fonts/NTSomic-Regular.woff2');
 }
 @font-face {
     font-family: 'NT Somic Medium';
-    src: url('./fonts/NTSomic-Medium.woff2');
+    src: url('../fonts/NTSomic-Medium.woff2');
 }
 @font-face {
     font-family: 'NT Somic Bold';
-    src: url('./fonts/NTSomic-Bold.woff2');
+    src: url('../fonts/NTSomic-Bold.woff2');
 }
 @font-face {
     font-family: 'Cabinet Grotesk Regular';
-    src: url('./fonts/CabinetGrotesk-Regular.woff2');
+    src: url('../fonts/CabinetGrotesk-Regular.woff');
 }
 @font-face {
     font-family: 'Cabinet Grotesk Medium';
-    src: url('./fonts/CabinetGrotesk-Medium.woff2');
+    src: url('../fonts/CabinetGrotesk-Medium.woff');
 }
 @font-face {
     font-family: 'Cabinet Grotesk Bold';
-    src: url('./fonts/CabinetGrotesk-Bold.woff2');
+    src: url('../fonts/CabinetGrotesk-Bold.woff');
 }
 
 :root{
