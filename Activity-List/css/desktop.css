@@ -1,0 +1,134 @@
+/*header*/
+header{
+    /* height: 16.8rem; */
+    width: 100%;
+    padding:36px 24px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:6px;
+    /* border:1px solid black; */
+    position:relative;
+}
+header .logo{
+    height: 12.7rem;
+    width:5rem;
+}
+.right-side{
+    display:flex;
+  
+    align-content: center;
+}
+.right-side .lang{
+    border:none;
+    background-color: transparent;
+    font-family: var(--font-family-nt-regular);
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    color:var(--color-yellow-highlight);
+    font-size: 1.4rem;
+}
+.right-side .lang:focus{
+    outline: none;
+    border:none;
+}
+.right-side #menu{
+    height: 2.8rem;
+    width: 4.9rem;
+    color: var(--color-yellow-highlight);
+    cursor: pointer;
+}
+.header-item{
+    position: absolute;
+    z-index: -1;
+    top:-50px;
+    width: 100%;
+    padding: 0;
+}
+
+.header-item-head{
+    position: relative;
+}
+main{
+    width: 100%;
+    background-color: var(--color-light-white);
+    padding:24px 24px;
+    position: relative;
+    border-radius: 60px;
+
+    height: 100vh; /*temp height*/
+}
+main .title-box{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:25px;
+    margin-bottom:2.5rem;
+}
+main .title-box h2{
+    color: var(--color-dark-purple);
+    font-family:var(--font-family-cg-regular);
+    font-size: 5rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+    flex:1;
+}
+main .title-box svg{
+    cursor:pointer;
+}
+hr.hr{
+   
+    margin: 0 auto;
+    width: 100%;
+    height: 2px;
+    background: rgba(172, 161, 255, 0.30);
+}
+
+
+/*footer*/
+.footer-item-head{
+    position:relative;
+}
+.footer-item{
+    position: absolute;
+    z-index: -1;
+    top:-60px;
+    width: 100%;
+    padding: 0;
+    z-index:2;
+}
+footer{
+    height:300px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position:relative;
+}
+
+footer .footer-pages{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:3px;
+    margin-bottom:1.4rem;
+
+}
+footer .footer-pages a{
+    color:var(--color-light-white);
+    font-family: var(--font-family-nt-regular);
+    font-size: 1.6rem;
+    font-weight: 400;
+
+}
+footer  p{
+    color:var(--color-light-white);
+    font-family: var(--font-family-nt-regular);
+    font-size: 1.6rem;
+    font-weight: 400;
+
+}

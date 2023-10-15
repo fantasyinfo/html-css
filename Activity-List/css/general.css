@@ -1,0 +1,59 @@
+
+/* font-family: 'Inter', sans-serif; */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'NT Somic Regular';
+    src: url('./fonts/NTSomic-Regular.woff2');
+}
+@font-face {
+    font-family: 'NT Somic Medium';
+    src: url('./fonts/NTSomic-Medium.woff2');
+}
+@font-face {
+    font-family: 'NT Somic Bold';
+    src: url('./fonts/NTSomic-Bold.woff2');
+}
+@font-face {
+    font-family: 'Cabinet Grotesk Regular';
+    src: url('./fonts/CabinetGrotesk-Regular.woff2');
+}
+@font-face {
+    font-family: 'Cabinet Grotesk Medium';
+    src: url('./fonts/CabinetGrotesk-Medium.woff2');
+}
+@font-face {
+    font-family: 'Cabinet Grotesk Bold';
+    src: url('./fonts/CabinetGrotesk-Bold.woff2');
+}
+
+:root{
+    --color-white: #ffffff;
+    --color-light-white: #FFFAF6;
+    --color-black: #000000;
+    --color-heading-black: #252C32;
+    --color-light-purple:#6C3DE6;
+    --color-dark-purple:#652FEB;
+    --color-yellow-highlight:#DAFF00;
+    /* font-family*/
+    --font-family-nt-regular: 'NT Somic Regular', sans-serif;
+    --font-family-nt-medium: 'NT Somic Medium', sans-serif;
+    --font-family-nt-bold: 'NT Somic Bold', sans-serif;
+
+    --font-family-cg-regular: 'Cabinet Grotesk Regular', sans-serif;
+    --font-family-cg-medium: 'Cabinet Grotesk Medium', sans-serif;
+    --font-family-cg-bold: 'Cabinet Grotesk Bold', sans-serif;
+}
+html{
+font-size: 62.5%; 
+}
+
+body{
+    max-width: 166rem;
+    width: 100%;
+    background-color: var(--color-light-purple);
+    
+}
