@@ -1,0 +1,138 @@
+@media only screen and (max-width:500px){
+    
+    main{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        margin-top:10px;
+    }
+
+    main .title-box h2{
+        font-size: 2rem;
+  
+    }
+    header .logo{
+        height: 4rem;
+        width:2rem;
+    }
+    .header-item{
+        top:-40px;
+    }
+    .footer-item{
+        top:-30px;
+    }
+    main{
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+   
+}
+@media only screen and (max-width:470px){
+    
+    main{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-top:10px;
+    }
+    main .title-box h2{
+        font-size: 1.6rem;
+  
+    }
+    header{
+        padding: 5px auto;
+    }
+    .header-item{
+        top:-40px;
+    }
+}
+@media only screen and (max-width:420px){
+    
+    main{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-top:10px;
+    }
+    main .title-box h2{
+        font-size: 1.6rem;
+  
+    }
+    header{
+        padding: 5px auto;
+    }
+    .header-item{
+        top:-30px;
+    }
+}
+@media only screen and (max-width:380px){
+    
+    main{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-top:10px;
+    }
+    main .title-box h2{
+        font-size: 1.6rem;
+  
+    }
+    header{
+        padding: 5px auto;
+    }
+    .header-item{
+        top:-30px;
+    }
+    main .title-box svg{
+        height: 2rem;
+        width:2rem;
+    }
+    .footer-item{
+        top:-20px;
+    }
+}
+
+@media only screen and (max-width:340px){
+    
+    main{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-top:7px;
+    }
+    main .title-box h2{
+        font-size: 1.4rem;
+  
+    }
+    header{
+        padding: 5px auto;
+    }
+    .header-item{
+        top:-30px;
+    }
+    main .title-box svg{
+        height: 2rem;
+        width:2rem;
+    }
+}
+
+@media only screen and (max-width:280px){
+    
+    main{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        margin-top:2px;
+    }
+    main .title-box h2{
+        font-size: 1rem;
+  
+    }
+    header{
+        padding: 5px auto;
+    }
+    .header-item{
+        top:-30px;
+    }
+    main .title-box svg{
+        height: 2rem;
+        width:2rem;
+    }
+    .header-item{
+        top:10px;
+    }
+}
