@@ -224,8 +224,11 @@ footer  p{
     -moz-transition:all 0.3s ease;
     -ms-transition:all 0.3s ease;
     -o-transition:all 0.3s ease;
+    display:none;
 }
-
+.filters::--webkit-scrollbar{
+display:none;
+}
 .rectangle{
     margin:8.8rem auto 0 auto;
     width: 20%;
@@ -328,4 +331,39 @@ footer  p{
 }
 .filter-values input[type="radio"]{
     visibility: hidden;
+}
+
+.submit-btn{
+    height: 7.8rem;
+    position:sticky;
+    bottom:0;
+    background-color:var(--color-light-purple);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+}
+
+.submit-btn button{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--color-yellow-highlight);
+    color:var(--color-light-purple);
+    font-size:1.6rem;
+    font-size: normal;
+    font-family: var(--font-family-cg-regular);
+    font-weight: 800;
+    line-height: normal;
+    border-radius:2.6rem;
+    -webkit-border-radius:2.6rem;
+    -moz-border-radius:2.6rem;
+    -ms-border-radius:2.6rem;
+    -o-border-radius:2.6rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
 }

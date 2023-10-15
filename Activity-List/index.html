@@ -102,8 +102,9 @@
 
           <div class="filter-title">
             <h5>Filters</h5>
-            <a href="#">Clear filters</a>
+            <a href="#" id="clear_filter">Clear filters</a>
           </div>
+          <form>
           <!-- Learning Style filter -->
           <div class="filter-items">
             <div class="filter-title-icon">
@@ -180,8 +181,83 @@
               <label for="animal" data-name="context">animal</label>
             </div>
           </div>
+          <!-- Positions filter -->
+          <div class="filter-items">
+            <div class="filter-title-icon">
+              <h6>Positions</h6>
+              <div class="down-btn_4" onclick="openFilter('filter_4')">
+                <ion-icon name="chevron-down-outline" id="down-btn"></ion-icon>
+              </div>
+              <div class="up-btn_4" onclick="closeFilter('filter_4')">
+                <ion-icon name="chevron-up-outline" id="up-btn"></ion-icon>
+              </div>
+            </div>
+            <div class="filter-values" id="filter_4">
+              <input type="radio" id="take a seat" value="take a seat" name="positions" onclick="changeColor('positions','take a seat')">
+              <label for="take a seat" data-name="positions">take a seat</label>
 
+              <input type="radio" id="lie down" value="lie down" name="positions" onclick="changeColor('positions','lie down')">
+              <label for="lie down" data-name="positions">lie down</label>
 
+              <input type="radio" id="stand up" value="stand up" name="positions" onclick="changeColor('positions','stand up')">
+              <label for="stand up" data-name="positions">stand up</label>
+              
+              <input type="radio" id="focus" value="focus" name="positions" onclick="changeColor('positions','focus')">
+              <label for="focus" data-name="positions">focus</label>
+
+            </div>
+          </div>
+          <!-- Duration Filter -->
+          <div class="filter-items">
+            <div class="filter-title-icon">
+              <h6>Duration</h6>
+              <div class="down-btn_5" onclick="openFilter('filter_5')">
+                <ion-icon name="chevron-down-outline" id="down-btn"></ion-icon>
+              </div>
+              <div class="up-btn_5" onclick="closeFilter('filter_5')">
+                <ion-icon name="chevron-up-outline" id="up-btn"></ion-icon>
+              </div>
+            </div>
+            <div class="filter-values" id="filter_5">
+              <input type="radio" id="<2 min" value="<2 min" name="ns_system" onclick="changeColor('durations','<2 min')">
+              <label for="<2 min" data-name="durations"><2 min</label>
+
+              <input type="radio" id="<5 min" value="<5 min" name="durations" onclick="changeColor('durations','<5 min')">
+              <label for="<5 min" data-name="durations"><5 min</label>
+
+              <input type="radio" id="<10 min" value="<10 min" name="durations" onclick="changeColor('durations','<10 min')">
+              <label for="<10 min" data-name="durations"><10 min</label>
+              
+            </div>
+          </div>
+          <!-- Nervous System Filter -->
+          <div class="filter-items">
+            <div class="filter-title-icon">
+              <h6>Nervours System</h6>
+              <div class="down-btn_6" onclick="openFilter('filter_6')">
+                <ion-icon name="chevron-down-outline" id="down-btn"></ion-icon>
+              </div>
+              <div class="up-btn_6" onclick="closeFilter('filter_6')">
+                <ion-icon name="chevron-up-outline" id="up-btn"></ion-icon>
+              </div>
+            </div>
+            <div class="filter-values" id="filter_6">
+              <input type="radio" id="yeahh - i feel great" value="yeahh - i feel great" name="ns_system" onclick="changeColor('ns_system','yeahh - i feel great')">
+              <label for="yeahh - i feel great" data-name="ns_system">yeahh - i feel great</label>
+
+              <input type="radio" id="ughh - too much on my plate" value="ughh - too much on my plate" name="ns_system" onclick="changeColor('ns_system','ughh - too much on my plate')">
+              <label for="ughh - too much on my plate" data-name="ns_system">ughh - too much on my plate</label>
+
+              <input type="radio" id="numb - i am so lost" value="numb - i am so lost" name="ns_system" onclick="changeColor('ns_system','numb - i am so lost')">
+              <label for="numb - i am so lost" data-name="ns_system">numb - i am so lost</label>
+              
+            </div>
+          </div>
+
+          <div class="submit-btn">
+            <button class="btn" type="submit" name="apply_filter">Apply filters <ion-icon name="chevron-forward-outline"></ion-icon></button>
+          </div>
+        </form>
         </div>
       </div>
 
@@ -196,7 +272,7 @@
                 <path d="M18.75 31.1667C25.9987 31.1667 31.875 25.421 31.875 18.3333C31.875 11.2457 25.9987 5.5 18.75 5.5C11.5013 5.5 5.625 11.2457 5.625 18.3333C5.625 25.421 11.5013 31.1667 18.75 31.1667Z" stroke="#6C3DE6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M28.125 27.5L39.375 38.5" stroke="#6C3DE6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
+              <svg id="filter_open" xmlns="http://www.w3.org/2000/svg" width="49" height="48" viewBox="0 0 49 48" fill="none">
                 <path d="M20.4167 35.6364H42.8751" stroke="#6C3DE6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M6.125 35.6364H12.25" stroke="#6C3DE6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M12.25 39.5959L12.25 31.6768" stroke="#6C3DE6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
