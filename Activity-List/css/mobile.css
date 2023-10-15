@@ -24,6 +24,13 @@
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
+
+    .desktop-menu .inner-items nav ul{
+        gap:60px;
+    }
+    .desktop-menu .inner-items nav ul li a{
+        font-size: 2rem; 
+    }
    
 }
 @media only screen and (max-width:470px){
