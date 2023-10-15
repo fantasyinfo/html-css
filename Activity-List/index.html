@@ -51,6 +51,7 @@
       </header>
 
       
+      <!-- Menu Section -->
       <div class="desktop-menu">
         <div class="close-menu-icon">
           <ion-icon name="close-outline" id="close-menu"></ion-icon>
@@ -91,6 +92,97 @@
         </div>
         <!-- <img class='spiral-1' src="./images/spiral-1.svg"/>
         <img class='spiral-2' src="./images/spiral-2.svg"/> -->
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filters">
+
+        <hr class="rectangle">
+        <div class="filter-container">
+
+          <div class="filter-title">
+            <h5>Filters</h5>
+            <a href="#">Clear filters</a>
+          </div>
+          <!-- Learning Style filter -->
+          <div class="filter-items">
+            <div class="filter-title-icon">
+              <h6>Learning Style</h6>
+              <div class="down-btn_1" onclick="openFilter('filter_1')">
+                <ion-icon name="chevron-down-outline" id="down-btn"></ion-icon>
+              </div>
+              <div class="up-btn_1" onclick="closeFilter('filter_1')">
+                <ion-icon name="chevron-up-outline" id="up-btn"></ion-icon>
+              </div>
+            </div>
+            <div class="filter-values" id="filter_1">
+              <input type="radio" id="solo" value="solo" name="ls" onclick="changeColor('ls','solo')">
+              <label for="solo" data-name="ls">Solo</label>
+              <input type="radio" id="duo" value="duo" name="ls" onclick="changeColor('ls','duo')">
+              <label for="duo" data-name="ls">Duo</label>
+              <input type="radio" id="group" value="group" name="ls" onclick="changeColor('ls','group')">
+              <label for="group" data-name="ls">Group</label>
+            </div>
+          </div>
+          <!-- Type of Practice filter -->
+          <div class="filter-items">
+            <div class="filter-title-icon">
+              <h6>Type of Practice</h6>
+              <div class="down-btn_2" onclick="openFilter('filter_2')">
+                <ion-icon name="chevron-down-outline" id="down-btn"></ion-icon>
+              </div>
+              <div class="up-btn_2" onclick="closeFilter('filter_2')">
+                <ion-icon name="chevron-up-outline" id="up-btn"></ion-icon>
+              </div>
+            </div>
+            <div class="filter-values" id="filter_2">
+              <input type="radio" id="visualize" value="visualize" name="top" onclick="changeColor('top','visualize')">
+              <label for="visualize" data-name="top">Visualize</label>
+              <input type="radio" id="move" value="move" name="top" onclick="changeColor('top','move')">
+              <label for="move" data-name="top">Move</label>
+              <input type="radio" id="sense" value="Sense" name="top" onclick="changeColor('top','sense')">
+              <label for="sense" data-name="top">sense</label>
+              <input type="radio" id="breathe" value="breathe" name="top" onclick="changeColor('top','breathe')">
+              <label for="breathe" data-name="top">Breathe</label>
+            </div>
+          </div>
+          <!-- Context Filter -->
+          <div class="filter-items">
+            <div class="filter-title-icon">
+              <h6>Context</h6>
+              <div class="down-btn_3" onclick="openFilter('filter_3')">
+                <ion-icon name="chevron-down-outline" id="down-btn"></ion-icon>
+              </div>
+              <div class="up-btn_3" onclick="closeFilter('filter_3')">
+                <ion-icon name="chevron-up-outline" id="up-btn"></ion-icon>
+              </div>
+            </div>
+            <div class="filter-values" id="filter_3">
+              <input type="radio" id="egypt" value="egypt" name="context" onclick="changeColor('context','egypt')">
+              <label for="egypt" data-name="context">egypt</label>
+
+              <input type="radio" id="space" value="space" name="context" onclick="changeColor('context','space')">
+              <label for="space" data-name="context">space</label>
+
+              <input type="radio" id="nature" value="nature" name="context" onclick="changeColor('context','nature')">
+              <label for="nature" data-name="context">nature</label>
+              
+              <input type="radio" id="at work" value="at work" name="context" onclick="changeColor('context','at work')">
+              <label for="at work" data-name="context">at work</label>
+
+              <input type="radio" id="5 elements" value="5 elements" name="context" onclick="changeColor('context','5 elements')">
+              <label for="5 elements" data-name="context">5 elements</label>
+
+              <input type="radio" id="4 seasons" value="4 seasons" name="context" onclick="changeColor('context','4 seasons')">
+              <label for="4 seasons" data-name="context">4 seasons</label>
+
+              <input type="radio" id="animal" value="animal" name="context" onclick="changeColor('context','animal')">
+              <label for="animal" data-name="context">animal</label>
+            </div>
+          </div>
+
+
+        </div>
       </div>
 
       <div class="header-item-head">
