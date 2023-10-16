@@ -63,3 +63,17 @@ function closeFilter(id) {
   document.getElementsByClassName(`up-btn_${getId}`)[0].style.display = "none";
   document.getElementById(id).classList.remove("active");
 }
+
+// slider scroll
+function scrollLeft1(id){
+
+  let slider = document.getElementsByClassName(id)[0];
+  console.log(slider)
+ slider.scrollLeft += 100;
+ 
+}
+function scrollRight1(id){
+  let slider = document.getElementsByClassName(id)[0];
+  console.log(slider)
+  slider.scrollRight += 100;
+}
