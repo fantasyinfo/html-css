@@ -55,5 +55,6 @@ body{
     max-width: 166rem;
     width: 100%;
     background-color: var(--color-light-purple);
+    margin:0 auto;
     
 }

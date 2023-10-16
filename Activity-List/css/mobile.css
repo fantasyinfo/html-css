@@ -31,6 +31,9 @@
     .desktop-menu .inner-items nav ul li a{
         font-size: 2rem; 
     }
+    .customized_rituals .r_title{
+        font-size: 1.6rem;
+    }
    
 }
 @media only screen and (max-width:470px){
