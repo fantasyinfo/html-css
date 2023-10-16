@@ -68,12 +68,12 @@ function closeFilter(id) {
 function scrollLeft1(id){
 
   let slider = document.getElementsByClassName(id)[0];
-  console.log(slider)
- slider.scrollLeft += 100;
+
+  slider.scrollLeft -= 100;
  
 }
 function scrollRight1(id){
   let slider = document.getElementsByClassName(id)[0];
   console.log(slider)
-  slider.scrollRight += 100;
+ slider.scrollLeft += 100;
 }
