@@ -5,6 +5,7 @@
   padding: 0;
   border: border-box;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 :root {
   --color-white: #ffffff;
@@ -148,9 +149,19 @@ main h2 {
 
 main .top-wrapper {
   margin: 32px 0;
-  display: flex;
+  display: grid;
   gap: 32px;
   align-items: flex-start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+main .top-wrapper .left-side{
+  grid-row-start: 1;
+  grid-row-end:3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
 }
 main .top-wrapper .left-side .top-img {
   width: 100%;
@@ -218,29 +229,75 @@ main .categories-tags a {
   margin-bottom: 20px;
 }
 
-main .top-wrapper .right-side .blog-item {
+main .top-wrapper  .blog-item {
   display: flex;
   gap: 24px;
   margin-bottom: 3.2rem;
 }
 
 main .col-3-item {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 32px; */
+
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(384px,1fr));
+  row-gap:2rem;
+  column-gap:1.5rem;
 }
 main .col-3-item img{
     height: 24rem;
-    width: 384px;
-    object-fit: cover;
+    /* width: 100%; */
+    object-fit: contain;
+    /* object-position: center; */
 }
 
 
+@media only screen and (max-width:1316px){
+  main .top-wrapper .left-side{
+    grid-row-start: 1;
+    grid-row-end:1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  
+  }
+  main .top-wrapper  .blog-item {
+    display: block;
+    gap: 24px;
+    margin-bottom: 3.2rem;
+  }
+}
+
 @media only screen and (max-width:900px){
-    main .col-3-item{
+  html {
+    font-size: 55.5%;
+  }
+    /* main .col-3-item{
         flex-direction: column;
     }
     main .col-3-item .left-side{
         padding:20px;
+    } */
+
+    main .top-wrapper .left-side{
+      grid-template-columns: repeat(auto-fit,minmax(384px,1fr));
+    
+    }
+    main .top-wrapper  .blog-item {
+      display: grid;
+      gap: 24px;
+      margin-bottom: 3.2rem;
+      grid-template-columns: repeat(auto-fit,minmax(384px,1fr));
+  
+    }
+
+    main .top-wrapper .left-side .top-img {
+      width: 80%;
+    }
+    header .subscribe{
+      flex-direction: column;
+    }
+    .blog-item {
+      width:30rem;
     }
 }

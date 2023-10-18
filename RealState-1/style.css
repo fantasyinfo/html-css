@@ -1,0 +1,222 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* font-family: 'Inter', sans-serif; */
+*{
+    margin:0;
+    padding:0;
+    border:border-box;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: 'Proxima Nova';
+    src: url('./fonts/Proxima Nova Font.otf');
+}
+:root{
+    --color-white: #ffffff;
+    --color-light-white: #F6F8F9;
+    --color-black: #000000;
+    --color-heading-black: #252C32;
+    --color-light-blue:#4094F7;
+
+    --color-red:#ff3f3f;
+    /* font-family*/
+    --font-family-nova: 'Proxima Nova', sans-serif;
+}
+html{
+font-size: 62.5%; 
+}
+body{
+    font-family: var(--font-family-nova);
+    max-width: 144rem;
+    width: 100%;
+    margin:0 auto;
+}
+
+.container{
+    width: 100%;
+ 
+}
+
+.top-section{
+    background-color:var(--color-black);
+  
+    height: 100vh;
+    position:relative;
+    padding:0 12rem;
+}
+.top-section::after{
+    content:'';
+    width:34%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    right:0;
+    background-color:var(--color-red);
+    z-index:1;
+}
+a{
+    text-decoration: none;
+    color:white;
+    cursor:pointer;
+}
+
+header{
+    background-color: transparent;
+    padding-top:5.6rem;
+    display:flex;
+    justify-content: space-between; 
+    align-items:center;
+  
+}
+header a.logo{
+    font-size:2.2rem;
+    text-transform: uppercase;
+    color:var(--color-white);
+    font-size: normal;
+    line-height: normal;
+    font-weight: 700;
+}
+header nav{
+    z-index: 2;
+
+    gap:40;
+}
+header nav a{
+    color:var(--color-white);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-right:4rem;
+
+}
+.btn{
+    cursor:pointer;
+    padding:15px 30px;
+    gap:10px;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+    border:none;
+    outline:none;
+    font-size:2.2rem;
+    font-style:normal;
+    font-weight: 600;
+    line-height: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.btn.btn-light{
+    color:var(--color-black);
+    background-color:var(--color-white);
+    border:1px solid transparent;
+}
+.btn.btn-dark{
+    color:var(--color-white);
+    background-color:var(--color-red);
+    border:1px solid transparent;
+}
+
+.btn.btn-light:hover{
+    background-color:transparent;
+    color:var(--color-white);
+    border:1px solid var(--color-white);
+}
+
+.btn.btn-dark:hover{
+    color:var(--color-black);
+    background-color:transparent;
+    border:1px solid var(--color-red);
+}
+
+/**hero seciton*/
+
+.hero{
+    margin:8.8rem 0 8.8rem 0;
+    display:flex;
+    justify-content: space-between;
+    position:relative;
+}
+
+.hero .left-side{
+    position:relative;
+
+}
+.hero .left-side h1.heading{
+    font-size:7.2rem;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    font-size: normal;
+    color:var(--color-white);
+}
+.hero .left-side p.para{
+    color:var(--color-white);
+    font-size: 1.8rem;
+    font-size: normal;
+    font-weight: 400;
+    line-height: 125%;
+    text-transform: capitalize;
+    margin-top:2.5rem;
+}
+
+.hero .left-side .search-bar{
+    margin-top:5rem;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:5px;
+    background-color:var(--color-white);
+    height: 6rem;
+    width: 65.4rem;
+    border-radius:1rem;
+    -webkit-border-radius:1rem;
+    -moz-border-radius:1rem;
+    -ms-border-radius:1rem;
+    -o-border-radius:1rem;
+    position: relative;
+    z-index:999;
+}
+.hero .left-side .search-bar input[type="search"]{
+    flex:1;
+    outline:none;
+    border:none;
+    font-size:2rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color:var(--color-black);
+    padding:0 10px;
+}
+
+.hero .left-side .search-bar button.btn.btn-dark{
+    font-size:2rem;
+}
+
+.hero .left-side .counter{
+    display:flex;
+    align-items:center;
+    color:var(--color-white);
+    margin-top:8rem;
+}
+
+.hero .left-side .counter .items{
+    
+}
+
+
+
+.hero .right-side{
+    position: absolute;
+    right: 100px;
+    z-index: 22;
+}
+
+.hero .right-side img{
+    height: 100%;
+    width:500px;
+}
