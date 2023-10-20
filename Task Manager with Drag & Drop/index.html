@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag & Drop Task Manager</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="left-side">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M7 5C6.46957 5 5.96086 5.21071 5.58579 5.58579C5.21071 5.96086 5 6.46957 5 7V9C5 9.53043 5.21071 10.0391 5.58579 10.4142C5.96086 10.7893 6.46957 11 7 11H9C9.53043 11 10.0391 10.7893 10.4142 10.4142C10.7893 10.0391 11 9.53043 11 9V7C11 6.46957 10.7893 5.96086 10.4142 5.58579C10.0391 5.21071 9.53043 5 9 5H7ZM7 13C6.46957 13 5.96086 13.2107 5.58579 13.5858C5.21071 13.9609 5 14.4696 5 15V17C5 17.5304 5.21071 18.0391 5.58579 18.4142C5.96086 18.7893 6.46957 19 7 19H9C9.53043 19 10.0391 18.7893 10.4142 18.4142C10.7893 18.0391 11 17.5304 11 17V15C11 14.4696 10.7893 13.9609 10.4142 13.5858C10.0391 13.2107 9.53043 13 9 13H7ZM13 7C13 6.46957 13.2107 5.96086 13.5858 5.58579C13.9609 5.21071 14.4696 5 15 5H17C17.5304 5 18.0391 5.21071 18.4142 5.58579C18.7893 5.96086 19 6.46957 19 7V9C19 9.53043 18.7893 10.0391 18.4142 10.4142C18.0391 10.7893 17.5304 11 17 11H15C14.4696 11 13.9609 10.7893 13.5858 10.4142C13.2107 10.0391 13 9.53043 13 9V7ZM13 15C13 14.4696 13.2107 13.9609 13.5858 13.5858C13.9609 13.2107 14.4696 13 15 13H17C17.5304 13 18.0391 13.2107 18.4142 13.5858C18.7893 13.9609 19 14.4696 19 15V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H15C14.4696 19 13.9609 18.7893 13.5858 18.4142C13.2107 18.0391 13 17.5304 13 17V15Z"
+              fill="#5B6871"
+            />
+          </svg>
+          <a href="#" class="logo">
+            <img src="./images/Icon button.png" alt="logo" />
+          </a>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Your work</a>
+              </li>
+              <li>
+                <a href="#"
+                  >Projects <ion-icon name="chevron-down-outline"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Filters <ion-icon name="chevron-down-outline"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Dashboards <ion-icon name="chevron-down-outline"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  >People <ion-icon name="chevron-down-outline"></ion-icon
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  >Apps <ion-icon name="chevron-down-outline"></ion-icon
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" class="btn btn-light">Create</a>
+        </div>
+        <div class="right-side">
+          <div class="search-container">
+            <ion-icon name="search-outline" id="search_icon"></ion-icon>
+            <input type="search" placeholder="Search" class="search_input" />
+          </div>
+          <ion-icon name="notifications" id="notification"></ion-icon>
+          <ion-icon name="help-circle" id="help"></ion-icon>
+          <ion-icon name="settings" id="settings"></ion-icon>
+          <img src="./images/girl.jpeg" alt="avatar" class="avatar_img" />
+        </div>
+      </header>
+      <!-- Sidebar -->
+      <section class="sidebar_menu">
+        <div class="project-name">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M21.6574 10.3427C20.5893 9.27527 19.2409 8.53192 17.7681 8.19859C16.2954 7.86526 14.7583 7.95557 13.3347 8.45906C11.9111 8.96256 10.6591 9.85868 9.72333 11.0438C8.7876 12.229 8.20641 13.6548 8.04693 15.1564C7.88746 16.6579 8.15622 18.174 8.82214 19.5293C9.48807 20.8845 10.524 22.0236 11.8101 22.8149C13.0962 23.6062 14.58 24.0173 16.0899 24.0008C17.5998 23.9842 19.0742 23.5407 20.3427 22.7214C20.4895 22.6207 20.655 22.5504 20.8295 22.5148C21.0039 22.4791 21.1837 22.4787 21.3583 22.5136C21.5328 22.5486 21.6987 22.6181 21.8459 22.7181C21.9932 22.8182 22.1189 22.9467 22.2157 23.0961C22.3125 23.2456 22.3784 23.4128 22.4095 23.5881C22.4406 23.7634 22.4363 23.9432 22.3968 24.1168C22.3573 24.2904 22.2834 24.4543 22.1796 24.5989C22.0757 24.7435 21.9439 24.8659 21.792 24.9587C19.801 26.2462 17.4377 26.8336 15.0756 26.6281C12.7134 26.4226 10.4871 25.4359 8.7483 23.824C7.00948 22.212 5.85731 20.0667 5.47381 17.7268C5.09031 15.387 5.49733 12.9861 6.63059 10.9034C7.76384 8.82068 9.55872 7.17494 11.7317 6.22614C13.9046 5.27734 16.3317 5.07958 18.6296 5.6641C20.9275 6.24862 22.9651 7.58209 24.4206 9.45386C25.876 11.3256 26.6664 13.629 26.6667 16C26.6669 16.743 26.4603 17.4713 26.0698 18.1034C25.6794 18.7355 25.1206 19.2464 24.4561 19.5788C23.7917 19.9112 23.0478 20.0519 22.3078 19.9852C21.5678 19.9186 20.8611 19.6471 20.2667 19.2014C19.5069 20.2144 18.4114 20.9241 17.1762 21.2034C15.9411 21.4827 14.6468 21.3133 13.5251 20.7257C12.4033 20.138 11.5273 19.1704 11.0537 17.996C10.5801 16.8215 10.5399 15.5169 10.9402 14.3155C11.3405 13.114 12.1552 12.0943 13.2386 11.4386C14.322 10.7829 15.6033 10.5341 16.8533 10.7367C18.1034 10.9394 19.2405 11.5801 20.0613 12.5445C20.8821 13.5088 21.333 14.7337 21.3334 16C21.3334 16.3537 21.4738 16.6928 21.7239 16.9428C21.9739 17.1929 22.3131 17.3334 22.6667 17.3334C23.0203 17.3334 23.3595 17.1929 23.6095 16.9428C23.8595 16.6928 24 16.3537 24 16C24 13.9507 23.2187 11.9067 21.6574 10.3427ZM18.6667 16C18.6667 15.2928 18.3857 14.6145 17.8856 14.1144C17.3855 13.6143 16.7073 13.3334 16 13.3334C15.2928 13.3334 14.6145 13.6143 14.1144 14.1144C13.6143 14.6145 13.3334 15.2928 13.3334 16C13.3334 16.7073 13.6143 17.3856 14.1144 17.8857C14.6145 18.3858 15.2928 18.6667 16 18.6667C16.7073 18.6667 17.3855 18.3858 17.8856 17.8857C18.3857 17.3856 18.6667 16.7073 18.6667 16Z"
+              fill="#F8C51B"
+            />
+          </svg>
+          <div class="project-title">
+            <h5 class="h5">Product Web</h5>
+            <p>Classis software project</p>
+          </div>
+        </div>
+        <div class="menu-items">
+          <nav>
+            <ul>
+              <li>
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4.58579 5.58579C4.21071 5.96086 4 6.46957 4 7V17C4 17.5304 4.21071 18.0391 4.58579 18.4142C4.96086 18.7893 5.46957 19 6 19H18C17.4696 19 16.9609 18.7893 16.5858 18.4142C16.2107 18.0391 16 17.5304 16 17V7C16 6.46957 15.7893 5.96086 15.4142 5.58579C15.0391 5.21071 14.5304 5 14 5H6C5.46957 5 4.96086 5.21071 4.58579 5.58579ZM13 8H7V12H13V8ZM7 14H13V16H7V14Z"
+                      fill="#84919A"
+                    />
+                    <path
+                      d="M18 9H17V16.5C17 16.8978 17.158 17.2794 17.4393 17.5607C17.7206 17.842 18.1022 18 18.5 18C18.8978 18 19.2794 17.842 19.5607 17.5607C19.842 17.2794 20 16.8978 20 16.5V11C20 10.4696 19.7893 9.96086 19.4142 9.58579C19.0391 9.21071 18.5304 9 18 9Z"
+                      fill="#84919A"
+                    />
+                  </svg>
+                  Backlog</a
+                >
+              </li>
+              <li>
+                <a href="#" class="active"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M4 6C4 5.73478 4.10536 5.48043 4.29289 5.29289C4.48043 5.10536 4.73478 5 5 5H7C7.26522 5 7.51957 5.10536 7.70711 5.29289C7.89464 5.48043 8 5.73478 8 6V18C8 18.2652 7.89464 18.5196 7.70711 18.7071C7.51957 18.8946 7.26522 19 7 19H5C4.73478 19 4.48043 18.8946 4.29289 18.7071C4.10536 18.5196 4 18.2652 4 18V6ZM10 6C10 5.73478 10.1054 5.48043 10.2929 5.29289C10.4804 5.10536 10.7348 5 11 5H13C13.2652 5 13.5196 5.10536 13.7071 5.29289C13.8946 5.48043 14 5.73478 14 6V18C14 18.2652 13.8946 18.5196 13.7071 18.7071C13.5196 18.8946 13.2652 19 13 19H11C10.7348 19 10.4804 18.8946 10.2929 18.7071C10.1054 18.5196 10 18.2652 10 18V6ZM17 5C16.7348 5 16.4804 5.10536 16.2929 5.29289C16.1054 5.48043 16 5.73478 16 6V18C16 18.2652 16.1054 18.5196 16.2929 18.7071C16.4804 18.8946 16.7348 19 17 19H19C19.2652 19 19.5196 18.8946 19.7071 18.7071C19.8946 18.5196 20 18.2652 20 18V6C20 5.73478 19.8946 5.48043 19.7071 5.29289C19.5196 5.10536 19.2652 5 19 5H17Z"
+                      fill="#4094F7"
+                    />
+                  </svg>
+                  Active sprints</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.9999 9C13.7347 9 13.4803 8.89464 13.2928 8.70711C13.1053 8.51957 12.9999 8.26522 12.9999 8C12.9999 7.73478 13.1053 7.48043 13.2928 7.29289C13.4803 7.10536 13.7347 7 13.9999 7H18.9999C19.2651 7 19.5195 7.10536 19.707 7.29289C19.8946 7.48043 19.9999 7.73478 19.9999 8V13C19.9999 13.2652 19.8946 13.5196 19.707 13.7071C19.5195 13.8946 19.2651 14 18.9999 14C18.7347 14 18.4803 13.8946 18.2928 13.7071C18.1053 13.5196 17.9999 13.2652 17.9999 13V10.414L13.7069 14.707C13.5194 14.8945 13.2651 14.9998 12.9999 14.9998C12.7348 14.9998 12.4804 14.8945 12.2929 14.707L9.99992 12.414L5.70692 16.707C5.51832 16.8892 5.26571 16.99 5.00352 16.9877C4.74132 16.9854 4.49051 16.8802 4.3051 16.6948C4.11969 16.5094 4.01452 16.2586 4.01224 15.9964C4.00997 15.7342 4.11076 15.4816 4.29292 15.293L9.29292 10.293C9.48045 10.1055 9.73475 10.0002 9.99992 10.0002C10.2651 10.0002 10.5194 10.1055 10.7069 10.293L12.9999 12.586L16.5859 9H13.9999Z"
+                      fill="#84919A"
+                    />
+                  </svg>
+                  Reports</a
+                >
+              </li>
+              <hr />
+              <li>
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M9 5C8.73478 5 8.48043 5.10536 8.29289 5.29289C8.10536 5.48043 8 5.73478 8 6C8 6.26522 8.10536 6.51957 8.29289 6.70711C8.48043 6.89464 8.73478 7 9 7H15C15.2652 7 15.5196 6.89464 15.7071 6.70711C15.8946 6.51957 16 6.26522 16 6C16 5.73478 15.8946 5.48043 15.7071 5.29289C15.5196 5.10536 15.2652 5 15 5H9ZM6 9C6 8.73478 6.10536 8.48043 6.29289 8.29289C6.48043 8.10536 6.73478 8 7 8H17C17.2652 8 17.5196 8.10536 17.7071 8.29289C17.8946 8.48043 18 8.73478 18 9C18 9.26522 17.8946 9.51957 17.7071 9.70711C17.5196 9.89464 17.2652 10 17 10H7C6.73478 10 6.48043 9.89464 6.29289 9.70711C6.10536 9.51957 6 9.26522 6 9ZM4 13C4 12.4696 4.21071 11.9609 4.58579 11.5858C4.96086 11.2107 5.46957 11 6 11H18C18.5304 11 19.0391 11.2107 19.4142 11.5858C19.7893 11.9609 20 12.4696 20 13V17C20 17.5304 19.7893 18.0391 19.4142 18.4142C19.0391 18.7893 18.5304 19 18 19H6C5.46957 19 4.96086 18.7893 4.58579 18.4142C4.21071 18.0391 4 17.5304 4 17V13Z"
+                      fill="#84919A"
+                    />
+                  </svg>
+                  Issues</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M12 5.5C12 5.10218 12.158 4.72064 12.4393 4.43934C12.7206 4.15804 13.1022 4 13.5 4C13.8978 4 14.2794 4.15804 14.5607 4.43934C14.842 4.72064 15 5.10218 15 5.5V6C15 6.26522 15.1054 6.51957 15.2929 6.70711C15.4804 6.89464 15.7348 7 16 7H19C19.2652 7 19.5196 7.10536 19.7071 7.29289C19.8946 7.48043 20 7.73478 20 8V11C20 11.2652 19.8946 11.5196 19.7071 11.7071C19.5196 11.8946 19.2652 12 19 12H18.5C18.1022 12 17.7206 12.158 17.4393 12.4393C17.158 12.7206 17 13.1022 17 13.5C17 13.8978 17.158 14.2794 17.4393 14.5607C17.7206 14.842 18.1022 15 18.5 15H19C19.2652 15 19.5196 15.1054 19.7071 15.2929C19.8946 15.4804 20 15.7348 20 16V19C20 19.2652 19.8946 19.5196 19.7071 19.7071C19.5196 19.8946 19.2652 20 19 20H16C15.7348 20 15.4804 19.8946 15.2929 19.7071C15.1054 19.5196 15 19.2652 15 19V18.5C15 18.1022 14.842 17.7206 14.5607 17.4393C14.2794 17.158 13.8978 17 13.5 17C13.1022 17 12.7206 17.158 12.4393 17.4393C12.158 17.7206 12 18.1022 12 18.5V19C12 19.2652 11.8946 19.5196 11.7071 19.7071C11.5196 19.8946 11.2652 20 11 20H8C7.73478 20 7.48043 19.8946 7.29289 19.7071C7.10536 19.5196 7 19.2652 7 19V16C7 15.7348 6.89464 15.4804 6.70711 15.2929C6.51957 15.1054 6.26522 15 6 15H5.5C5.10218 15 4.72064 14.842 4.43934 14.5607C4.15804 14.2794 4 13.8978 4 13.5C4 13.1022 4.15804 12.7206 4.43934 12.4393C4.72064 12.158 5.10218 12 5.5 12H6C6.26522 12 6.51957 11.8946 6.70711 11.7071C6.89464 11.5196 7 11.2652 7 11V8C7 7.73478 7.10536 7.48043 7.29289 7.29289C7.48043 7.10536 7.73478 7 8 7H11C11.2652 7 11.5196 6.89464 11.7071 6.70711C11.8946 6.51957 12 6.26522 12 6V5.5Z"
+                      fill="#84919A"
+                    />
+                  </svg>
+                  Components</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.316 5.051C14.4407 5.09247 14.5559 5.15809 14.6552 5.24412C14.7545 5.33014 14.8358 5.43488 14.8946 5.55236C14.9534 5.66983 14.9885 5.79774 14.9978 5.92876C15.0071 6.05979 14.9906 6.19138 14.949 6.316L10.949 18.316C10.8652 18.5677 10.6849 18.7758 10.4476 18.8945C10.2104 19.0132 9.93572 19.0328 9.68403 18.949C9.43234 18.8652 9.22425 18.6848 9.10554 18.4476C8.98683 18.2104 8.96722 17.9357 9.05103 17.684L13.051 5.684C13.0925 5.55936 13.1581 5.44411 13.2442 5.34483C13.3302 5.24556 13.4349 5.16421 13.5524 5.10542C13.6699 5.04664 13.7978 5.01158 13.9288 5.00224C14.0598 4.9929 14.1914 5.00947 14.316 5.051V5.051ZM7.70703 8.293C7.8945 8.48053 7.99982 8.73483 7.99982 9C7.99982 9.26516 7.8945 9.51947 7.70703 9.707L5.41403 12L7.70703 14.293C7.80254 14.3852 7.87872 14.4956 7.93113 14.6176C7.98354 14.7396 8.01113 14.8708 8.01228 15.0036C8.01343 15.1364 7.98813 15.2681 7.93785 15.391C7.88757 15.5138 7.81332 15.6255 7.71943 15.7194C7.62553 15.8133 7.51388 15.8875 7.39098 15.9378C7.26809 15.9881 7.13641 16.0134 7.00363 16.0122C6.87085 16.0111 6.73963 15.9835 6.61763 15.9311C6.49562 15.8787 6.38528 15.8025 6.29303 15.707L3.29303 12.707C3.10556 12.5195 3.00024 12.2652 3.00024 12C3.00024 11.7348 3.10556 11.4805 3.29303 11.293L6.29303 8.293C6.48056 8.10553 6.73487 8.00021 7.00003 8.00021C7.26519 8.00021 7.5195 8.10553 7.70703 8.293V8.293ZM16.293 8.293C16.4806 8.10553 16.7349 8.00021 17 8.00021C17.2652 8.00021 17.5195 8.10553 17.707 8.293L20.707 11.293C20.8945 11.4805 20.9998 11.7348 20.9998 12C20.9998 12.2652 20.8945 12.5195 20.707 12.707L17.707 15.707C17.6148 15.8025 17.5044 15.8787 17.3824 15.9311C17.2604 15.9835 17.1292 16.0111 16.9964 16.0122C16.8637 16.0134 16.732 15.9881 16.6091 15.9378C16.4862 15.8875 16.3745 15.8133 16.2806 15.7194C16.1867 15.6255 16.1125 15.5138 16.0622 15.391C16.0119 15.2681 15.9866 15.1364 15.9878 15.0036C15.9889 14.8708 16.0165 14.7396 16.0689 14.6176C16.1213 14.4956 16.1975 14.3852 16.293 14.293L18.586 12L16.293 9.707C16.1056 9.51947 16.0002 9.26516 16.0002 9C16.0002 8.73483 16.1056 8.48053 16.293 8.293V8.293Z"
+                      fill="#84919A"
+                    />
+                  </svg>
+                  Code</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M10.2929 4.29289C10.4804 4.10536 10.7348 4 11 4H13C13.2652 4 13.5196 4.10536 13.7071 4.29289C13.8946 4.48043 14 4.73478 14 5C14 5.26522 13.8946 5.51957 13.7071 5.70711C13.5196 5.89464 13.2652 6 13 6H11C10.7348 6 10.4804 5.89464 10.2929 5.70711C10.1054 5.51957 10 5.26522 10 5C10 4.73478 10.1054 4.48043 10.2929 4.29289Z"
+                      fill="#84919A"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M6.58579 5.58579C6.21071 5.96086 6 6.46957 6 7V18C6 18.5304 6.21071 19.0391 6.58579 19.4142C6.96086 19.7893 7.46957 20 8 20H16C16.5304 20 17.0391 19.7893 17.4142 19.4142C17.7893 19.0391 18 18.5304 18 18V7C18 6.46957 17.7893 5.96086 17.4142 5.58579C17.0391 5.21071 16.5304 5 16 5C16 5.79565 15.6839 6.55871 15.1213 7.12132C14.5587 7.68393 13.7956 8 13 8H11C10.2044 8 9.44129 7.68393 8.87868 7.12132C8.31607 6.55871 8 5.79565 8 5C7.46957 5 6.96086 5.21071 6.58579 5.58579ZM15.9877 12.0036C15.99 12.2658 15.8892 12.5184 15.707 12.707L11.707 16.707C11.5195 16.8945 11.2652 16.9998 11 16.9998C10.7348 16.9998 10.4805 16.8945 10.293 16.707L8.293 14.707C8.11084 14.5184 8.01005 14.2658 8.01233 14.0036C8.0146 13.7414 8.11977 13.4906 8.30518 13.3052C8.49059 13.1198 8.7414 13.0146 9.0036 13.0123C9.2658 13.01 9.5184 13.1108 9.707 13.293L11 14.586L14.293 11.293C14.4816 11.1108 14.7342 11.01 14.9964 11.0123C15.2586 11.0146 15.5094 11.1198 15.6948 11.3052C15.8802 11.4906 15.9854 11.7414 15.9877 12.0036Z"
+                      fill="#84919A"
+                    />
+                  </svg>
+                  Releases</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M9.58579 4.58579C9.96086 4.21071 10.4696 4 11 4H14.586C15.1164 4.00011 15.625 4.2109 16 4.586L18.414 7C18.7891 7.37499 18.9999 7.88361 19 8.414V14C19 14.5304 18.7893 15.0391 18.4142 15.4142C18.0391 15.7893 17.5304 16 17 16H11C10.4696 16 9.96086 15.7893 9.58579 15.4142C9.21071 15.0391 9 14.5304 9 14V6C9 5.46957 9.21071 4.96086 9.58579 4.58579Z"
+                      fill="#84919A"
+                    />
+                    <path
+                      d="M5.58579 8.58579C5.21071 8.96086 5 9.46957 5 10V18C5 18.5304 5.21071 19.0391 5.58579 19.4142C5.96086 19.7893 6.46957 20 7 20H13C13.5304 20 14.0391 19.7893 14.4142 19.4142C14.7893 19.0391 15 18.5304 15 18H7V8C6.46957 8 5.96086 8.21071 5.58579 8.58579Z"
+                      fill="#84919A"
+                    />
+                  </svg>
+                  Project pages</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- Main -->
+      <main class="main">
+        <div class="breadcrum">
+          <a href="#">Projects</a>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <a href="#">International</a>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+          <a href="#">Product Web</a>
+        </div>
+        <div class="title-share">
+          <div class="left-side">
+            <h2 class="h2">All sprints</h2>
+          </div>
+          <div class="right-side">
+            <ion-icon name="star"></ion-icon>
+            <a href="/" class="btn btn-dark">Complete sprint</a>
+            <ion-icon name="share-social"></ion-icon>
+            <button class="more">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </button>
+          </div>
+        </div>
+        <div class="search-bar-user-icon">
+          <div class="search-container">
+            <ion-icon name="search-outline" id="search_icon"></ion-icon>
+            <input type="search" placeholder="Search" class="search_input" />
+          </div>
+          <div class="user-container">
+            <div >
+              <img src="./images/5.jpg" alt="img" />
+            </div>
+            <div>
+              <img src="./images/2.jpeg" alt="img" />
+            </div>
+            <div>
+              <img src="./images/3.jpeg" alt="img" />
+            </div>
+            <div>
+              <img src="./images/4.jpeg" alt="img" />
+            </div>
+            <div class="img">9</div>
+          </div>
+          <div class="menu-links">
+            <ul>
+              <li>
+                <a href="#">Only My Issues</a>
+              </li>
+              <li>
+                <a href="#">Recently Updated</a>
+              </li>
+              <li>
+                <a href="#">All sprints <ion-icon name="chevron-down-outline"></ion-icon
+                  ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- drag box -->
+
+        <div class="dragboxes">
+          <div class="drag-todo">
+            <h6 class="h6">TO DO</h6>
+
+
+            <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 1)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+            <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a user, I want to see actual overusage price for next download (Item 2)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+            <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dicta. (Item 3)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+            <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, ullam. (Item 4)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+            <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, velit? (Item 5)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+            <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 6)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+
+
+
+
+
+          </div>
+         
+          <div class="drag-in-progress">
+            <h6 class="h6">IN PROGRESS</h6>
+              <!-- dragbox start-->
+              <div class="drag-box" draggable="true">
+                <p class="title">
+                  As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 7)
+                </p>
+                <div class="info-label">Refactoring</div>
+  
+                <div class="footer-icons">
+                  <div class="left-side">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                    <div class="total_comment">
+                      2
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <span>FC-7</span>
+                    <div class="user-icon">
+                      <img src="./images/2.jpeg" alt="user">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- dragbox end -->  <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 8)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->  <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 9)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->  <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 10)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->  <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 11)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->  <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 12)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->  <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 13)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+          </div>
+          <div class="drag-done">
+            <h6 class="h6">DONE</h6>
+              <!-- dragbox start-->
+              <div class="drag-box" draggable="true">
+                <p class="title">
+                  As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 14)
+                </p>
+                <div class="info-label">Refactoring</div>
+  
+                <div class="footer-icons">
+                  <div class="left-side">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                    <div class="total_comment">
+                      2
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <span>FC-7</span>
+                    <div class="user-icon">
+                      <img src="./images/2.jpeg" alt="user">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- dragbox end -->
+                <!-- dragbox start-->
+            <div class="drag-box" draggable="true">
+              <p class="title">
+                As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 15)
+              </p>
+              <div class="info-label">Refactoring</div>
+
+              <div class="footer-icons">
+                <div class="left-side">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                  <ion-icon name="chevron-up-outline"></ion-icon>
+                  <div class="total_comment">
+                    2
+                  </div>
+                </div>
+                <div class="right-side">
+                  <span>FC-7</span>
+                  <div class="user-icon">
+                    <img src="./images/2.jpeg" alt="user">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- dragbox end -->
+              <!-- dragbox start-->
+              <div class="drag-box" draggable="true">
+                <p class="title">
+                  As a translator, I want integrate Crowdin webhook to notify translators about changed strings (Item 15)
+                </p>
+                <div class="info-label">Refactoring</div>
+  
+                <div class="footer-icons">
+                  <div class="left-side">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                    <ion-icon name="chevron-up-outline"></ion-icon>
+                    <div class="total_comment">
+                      2
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <span>FC-7</span>
+                    <div class="user-icon">
+                      <img src="./images/2.jpeg" alt="user">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- dragbox end -->
+          </div>
+        </div>
+
+
+      </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      let dragBoxes = document.querySelectorAll('.drag-box');
+      let dragTODO = document.querySelector('.drag-todo');
+      let dragInProgress = document.querySelector('.drag-in-progress');
+      let dragDone = document.querySelector('.drag-done');
+
+
+      dragBoxes.forEach((dragBox)=>{
+        dragBox.addEventListener('dragstart', (element)=>{
+          let selectedItem = element.target;
+
+          // dragover to todolist
+          dragTODO.addEventListener('dragover', (e)=>{
+            e.preventDefault();
+         
+          });
+
+          dragTODO.addEventListener('drop', (e)=>{
+            dragTODO.appendChild(selectedItem);
+            selectedItem = null;
+          });
+
+
+
+          // dragover to inprogress list
+          dragInProgress.addEventListener('dragover', (e)=>{
+            e.preventDefault();
+          });
+
+          dragInProgress.addEventListener('drop', (e)=>{
+            dragInProgress.appendChild(selectedItem);
+            selectedItem = null;
+          });
+
+
+
+          // dragover to done list
+          dragDone.addEventListener('dragover', (e)=>{
+            e.preventDefault();
+          });
+
+          dragDone.addEventListener('drop', (e)=>{
+            dragDone.appendChild(selectedItem);
+            selectedItem = null;
+          });
+
+
+
+
+        })
+      })
+
+
+
+
+    </script>
+  </body>
+</html>
