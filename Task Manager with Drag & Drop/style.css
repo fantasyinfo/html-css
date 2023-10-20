@@ -581,3 +581,55 @@ main .dragboxes .drag-box .footer-icons .right-side .user-icon img {
   font-family: var(--font-family-inter);
   line-height: normal;
 }
+
+
+/* Media Quaries */
+
+@media (max-width:1120px){
+ 
+  html {
+    font-size: 58%;
+  }
+}
+@media (max-width:1070px){
+ 
+  html {
+    font-size: 55%;
+  }
+  .sidebar_menu {
+    display:none;
+  }
+
+  main.main{
+    margin-left:0;
+  }
+  header.header .left-side nav {
+   display:none;
+}
+}
+
+@media (max-width:830px){
+ 
+  html {
+    font-size: 50%;
+  }
+  
+  header.header .left-side nav {
+   display:none;
+}
+}
+@media (max-width:780px){
+ 
+  .menu-links{
+    display:none;
+  }
+  .header .search-container{
+    display:none;
+  }
+  .container{
+    padding:0;
+  }
+  header .header{
+    padding:0 1rem;
+  }
+}
