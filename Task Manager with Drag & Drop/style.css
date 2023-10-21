@@ -47,7 +47,11 @@ header.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  top: 0;
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  z-index: 9999999;
 }
 
 header.header .left-side {
@@ -225,6 +229,7 @@ main.main {
   padding: 2.4rem;
   margin: 0 auto;
   margin-left: 24rem;
+  margin-top:6rem;
 }
 
 main .breadcrum {
