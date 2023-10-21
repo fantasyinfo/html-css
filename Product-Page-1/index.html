@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Product Page 1</title>
-        <script
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page 1</title>
+    <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
@@ -13,9 +13,117 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-       <link rel="stylesheet" href="./style.css">
-    </head>
-    <body>
-     
-    </body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <ion-icon name="menu"></ion-icon>
+        <h2 class="title">Foculty</h2>
+        <div class="right-icons">
+          <ion-icon name="search"></ion-icon>
+          <ion-icon name="heart"></ion-icon>
+          <ion-icon name="person"></ion-icon>
+          <ion-icon name="bag"></ion-icon>
+        </div>
+      </header>
+
+      <main>
+        <div class="product-box">
+          <div class="breadcrum">
+            <a href="#"
+              >Home <ion-icon name="chevron-forward-outline"></ion-icon
+            ></a>
+            <a href="#"
+              >Catelog <ion-icon name="chevron-forward-outline"></ion-icon
+            ></a>
+            <a href="#">Cotton sweatshrit</a>
+          </div>
+          <!-- product -->
+          <div class="product-details">
+            <div class="left-side">
+              <div class="product-images">
+                <img src="./images/2.avif" alt="img" />
+                <img src="./images/3.avif" alt="img" />
+                <img src="./images/4.avif" alt="img" />
+                <img src="./images/5.avif" alt="img" />
+                <img src="./images/6.avif" alt="img" />
+                <!-- <img src="./images/7.avif" alt="img" /> -->
+              </div>
+              <div class="product-big-image">
+                <img src="./images/1.avif" alt="big-img" />
+              </div>
+            </div>
+            <div class="right-side">
+              <div class="new-tag">
+                New!
+              </div>
+              <div class="product-name">
+                Cotton sweatshirt
+              </div>
+              <div class="product-price">
+                $1,299
+              </div>
+              <div class="product-id">
+                107293
+              </div>
+              <div class="product-features">
+                <ul>
+                  <li>Relaxed fit</li>
+                  <li>Crew neck</li>
+                  <li>Drop shoulder sleeves</li>
+                  <li>Elasticated neckline, hemline and cuffs</li>
+                  <li>Made in India</li>
+                </ul>
+              </div>
+              <div class="size">
+                <p>Size</p>
+                <div class="size-box">
+                  <button class="sizebox-btn active">XS</button>
+                  <button class="sizebox-btn">S</button>
+                  <button class="sizebox-btn">M</button>
+                  <button class="sizebox-btn">L</button>
+                </div>
+              </div>
+              <button class="add_to_cart">
+                Add to Cart
+              </button>
+              <div class="wishlist">
+                <ion-icon name="heart"></ion-icon> Add to Wishlist
+              </div>
+              <div class="drop-box">
+                <div class="drop-container">
+                  <div class="header-drop">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>  Size & fit
+                  </div>
+                  <div class="body-drop">
+                    24px
+                  </div>
+                </div>
+                <div class="drop-container">
+                  <div class="header-drop">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>  Care
+                  </div>
+                  <div class="body-drop">
+                    Meri Care Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, cum.
+                  </div>
+                </div>
+                <div class="drop-container">
+                  <div class="header-drop">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>  Composition
+                  </div>
+                  <div class="body-drop">
+                   mera composition Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, nemo! Eligendi, magni iure blanditiis distinctio adipisci obcaecati sapiente laboriosam maxime?
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
